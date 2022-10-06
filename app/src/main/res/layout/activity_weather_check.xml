@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeatherCheck.Activity.WeatherCheckActivity">
+
+    <!-- 상단여백 159-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="159" />
+
+    <!-- 상단 메뉴 193-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="34"
+        android:orientation="horizontal">
+
+        <!-- 좌측 첫 여백 71-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="71" />
+
+        <!-- 오늘 단어 131-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="오늘"
+            android:layout_weight="60"
+            android:fontFamily="@font/notosanscjkkr_black"
+            android:textSize="6dp"/>
+
+        <!-- 오늘 다음 여백 156-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25" />
+
+        <!-- 날짜 274-->
+        <TextView
+            android:id="@+id/tvSetDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="118"
+            android:gravity="bottom|left"
+            android:textSize="5dp" />
+
+        <!-- 날짜, 버튼 사이 여백 964-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="690" />
+
+        <!-- 이미지버튼 1004-->
+        <ImageButton
+            android:id="@+id/btnMovetoList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:background="@drawable/btn_menu" />
+
+        <!-- 버튼 다음 여백 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="76" />
+    </LinearLayout>
+
+    <!-- 메뉴 밑 여백 229-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="36" />
+
+    <!-- 날씨 1204-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="975"
+        android:orientation="vertical"
+        android:background="@drawable/img_bg_1">
+
+        <!-- 상단 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="113" />
+
+        <!-- 날씨 아이콘 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/igvWeatherIcon"
+            android:gravity="right|bottom"
+            android:layout_weight="162" />
+
+        <!-- 날씨 아이콘 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="45" />
+
+        <!-- 도시 작성 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/tvCityNameSet"
+            android:textSize="9dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="33" />
+
+        <!-- 도시 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10" />
+
+        <!-- 온도 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="106"
+            android:id="@+id/tvNowTempSet"
+            android:hint="Test"
+            android:text="온도온도"
+            android:gravity="center"
+            android:fontFamily="@font/notosanscjkkr_black"
+            android:textSize="21.7sp"/>
+
+        <!-- 온도 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20" />
+
+        <!-- 최고 최저 기온 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46"
+            android:gravity="center|top"
+            android:id="@+id/tvHighLowTemp"
+            android:hint="Test"
+            android:fontFamily="@font/notosanscjkkr_medium"
+            android:textSize="8sp"/>
+
+        <!-- 최고 최저 기온 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="118" />
+
+        <!-- 1시간 당 날씨 아이콘 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="81">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="153"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleIcon1"
+                android:background="@drawable/img_cloud"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleIcon2"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleIcon3"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleIcon4"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleIcon5"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="152"/>
+
+        </LinearLayout>
+
+        <!-- 1시간 당 날씨 아이콘 밑 여백
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="11" /> -->
+
+        <!-- 1시간 당 날씨 온도 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="45"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="153"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLittleTemp1"
+                android:textSize="9sp"
+                android:gravity="top|center"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="81"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLittleTemp2"
+                android:textSize="9sp"
+                android:gravity="top|center"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLittleTemp3"
+                android:textSize="9sp"
+                android:gravity="top|center"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLittleTemp4"
+                android:textSize="9sp"
+                android:gravity="top|center"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLittleTemp5"
+                android:textSize="9sp"
+                android:gravity="top|center"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="152"/>
+
+
+
+        </LinearLayout>
+
+        <!-- 1시간 당 날씨 온도 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="29" />
+
+        <!-- 1시간 당 표시 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="153"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLittleTime1"
+                android:fontFamily="@font/notosanscjkkr_medium"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:hint="test"
+                android:layout_weight="81"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkr_medium"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:id="@+id/tvLittleTime2"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkr_medium"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:id="@+id/tvLittleTime3"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkr_medium"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:id="@+id/tvLittleTime4"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="103"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkr_medium"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:id="@+id/tvLittleTime5"
+                android:layout_weight="82"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="152"/>
+
+
+
+        </LinearLayout>
+
+        <!-- 1시간 당 날씨 온도 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="109" />
+
+
+    </LinearLayout>
+
+    <!-- 여백 1237-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33" />
+
+    <!-- 보조지표 1395-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="158"
+        android:orientation="vertical"
+        android:background="@drawable/img_bg_2">
+
+        <!-- 첫 여백  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="18"/>
+
+        <!-- 온도 등등 들어가는 곳 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="55"
+            android:orientation="horizontal">
+
+            <!-- 왼쪽 첫 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="150"/>
+
+            <!-- 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvSecondBoxTemp"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_weight="80"/>
+
+            <!-- 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="114"/>
+
+            <!-- hpa 대기압  -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvSecondBoxHpa"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_weight="143"/>
+
+            <!-- 대기압 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="113"/>
+
+            <!-- 습도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvSecondBoxHumidity"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:textSize="11sp"
+                android:gravity="right"
+                android:layout_weight="73"/>
+
+            <!-- 습도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="117"/>
+
+            <!-- 풍속 (knot 로 표기 해야됨) -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvSecondBoxWindSpeed"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_weight="134"/>
+
+            <!-- 풍속 다음 마지막 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="153"/>
+
+
+        </LinearLayout>
+
+        <!-- 두 번째 텍스트뷰 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="44"
+            android:orientation="horizontal">
+
+            <!-- 첫 번째 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="153"/>
+
+            <!-- 체감온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="체감온도"
+                android:textSize="8sp"
+                android:gravity="top"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="81"/>
+
+            <!-- 체감온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="156"/>
+
+            <!-- 대기압 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="대기압"
+                android:textSize="8sp"
+                android:gravity="top"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="60"/>
+
+            <!-- 대기압 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="170"/>
+
+            <!-- 습도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="습도"
+                android:textSize="8sp"
+                android:gravity="top|left"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="40"/>
+
+            <!-- 습도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="174"/>
+
+            <!-- 풍속 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="풍속"
+                android:textSize="8sp"
+                android:gravity="top"
+                android:fontFamily="@font/notosanscjkkr_black"
+                android:layout_weight="41"/>
+
+            <!-- 풍속 다음 마지막 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="197"/>
+
+
+        </LinearLayout>
+
+        <!-- 두 번째 텍스트뷰 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="41"/>
+
+    </LinearLayout>
+    <!-- 여백 1432-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="37"
+        />
+
+    <!-- 온도 1998-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="566"
+        android:orientation="vertical"
+        android:background="@drawable/img_bg_3">
+
+        <!-- 첫 번째 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65"/>
+
+        <!-- 최고온도 들어가는 칸 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="21">
+
+            <!-- 첫 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="137"/>
+
+            <!-- 첫 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxTemp1"
+                android:layout_weight="48"/>
+
+            <!-- 첫 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 두 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxTemp2"
+                android:layout_weight="48"/>
+
+            <!-- 두 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 세 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxTemp3"
+                android:layout_weight="48"/>
+
+            <!-- 세 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 네 번째 온도 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxTemp4"
+                android:layout_weight="48"
+                android:orientation="horizontal" />
+
+            <!-- 네 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 다섯 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxTemp5"
+                android:layout_weight="48"/>
+
+            <!-- 다섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 여섯 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxTemp6"
+                android:layout_weight="48"/>
+
+            <!-- 여섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 마지막 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxTemp7"
+                android:layout_weight="48"/>
+
+            <!-- 마지막 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="157"/>
+
+        </LinearLayout>
+
+        <!-- 온도 다음 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="18"/>
+
+        <!-- 프로그래스 바 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="206">
+
+            <!-- 첫 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="149"/>
+
+            <!-- 첫번째 프로그래스 바 -->
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pgLastBoxBar1"
+                android:layout_weight="21"/>
+
+            <!-- 첫 프로그래스 바 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100"/>
+
+            <!-- 두 번째 프로그래스 바 -->
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pgLastBoxBar2"
+                android:layout_weight="21"/>
+
+            <!-- 두 번째 프로그래스 바 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100"/>
+
+            <!-- 세 번째 프로그래스 바 -->
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pgLastBoxBar3"
+                android:layout_weight="21"/>
+
+            <!-- 세 번째 프로그래스 바 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100"/>
+
+            <!-- 네 번째 프로그래스 바 -->
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pgLastBoxBar4"
+                android:layout_weight="21"/>
+
+            <!-- 네 번째 프로그래스 바 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100"/>
+
+            <!-- 다섯 번째 프로그래스 바 -->
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pgLastBoxBar5"
+                android:layout_weight="21"/>
+
+            <!-- 다섯 번째 프로그래스 바 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100"/>
+
+            <!-- 여섯 번째 프로그래스 바 -->
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pgLastBoxBar6"
+                android:layout_weight="21"/>
+
+            <!-- 여섯 번째 프로그래스 바 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100"/>
+
+            <!-- 일곱 번째 프로그래스 바 -->
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pgLastBoxBar7"
+                android:layout_weight="21"/>
+
+            <!-- 첫 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="184"/>
+
+        </LinearLayout>
+
+        <!-- 프로그래스 바 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"/>
+
+        <!-- 최저온도 들어가는 칸 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="20">
+
+            <!-- 첫 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="137"/>
+
+            <!-- 첫 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxLowTemp1"
+                android:layout_weight="48"/>
+
+            <!-- 첫 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 두 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxLowTemp2"
+                android:layout_weight="48"/>
+
+            <!-- 두 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 세 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxLowTemp3"
+                android:layout_weight="48"/>
+
+            <!-- 세 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 네 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxLowTemp4"
+                android:layout_weight="48"/>
+
+            <!-- 네 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 다섯 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxLowTemp5"
+                android:layout_weight="48"/>
+
+            <!-- 다섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 여섯 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxLowTemp6"
+                android:layout_weight="48"/>
+
+            <!-- 여섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 마지막 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvLastBoxLowTemp7"
+                android:layout_weight="48"/>
+
+            <!-- 마지막 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="157"/>
+
+        </LinearLayout>
+
+        <!-- 최저온도 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="47"/>
+
+        <!-- 온도 아이콘 들어가는 칸 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="81">
+
+            <!-- 첫 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="137"/>
+
+            <!-- 첫 온도 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleTempIcon1"
+                android:layout_weight="48"/>
+
+            <!-- 첫 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 두 번째 온도 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleTempIcon2"
+                android:layout_weight="48"/>
+
+            <!-- 두 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 세 번째 온도 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleTempIcon3"
+                android:layout_weight="48"/>
+
+            <!-- 세 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 네 번째 온도 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleTempIcon4"
+                android:layout_weight="48"/>
+
+            <!-- 네 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 다섯 번째 온도 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleTempIcon5"
+                android:layout_weight="48"/>
+
+            <!-- 다섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 여섯 번째 온도 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleTempIcon6"
+                android:layout_weight="48"/>
+
+            <!-- 여섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"/>
+
+            <!-- 마지막 온도 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/igvLittleTempIcon7"
+                android:layout_weight="48"/>
+
+            <!-- 마지막 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="157"/>
+
+
+        </LinearLayout>
+
+        <!-- 온도 아이콘 밑 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"/>
+
+        <!-- 요일 들어가는 칸 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="58">
+
+            <!-- 첫 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="143"/>
+
+            <!-- 첫 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="일"
+                android:gravity="top|center"
+                android:textSize="10sp"
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:layout_weight="26"/>
+
+            <!-- 첫 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="98"/>
+
+            <!-- 두 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="월"
+                android:layout_weight="26"/>
+
+            <!-- 두 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="98"/>
+
+            <!-- 세 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="화"
+                android:layout_weight="26"/>
+
+            <!-- 세 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="98"/>
+
+            <!-- 네 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="수"
+                android:layout_weight="26"/>
+
+            <!-- 네 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="98"/>
+
+            <!-- 다섯 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="목"
+                android:layout_weight="26"/>
+
+            <!-- 다섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="98"/>
+
+            <!-- 여섯 번째 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="금"
+                android:layout_weight="26"/>
+
+            <!-- 여섯 번째 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="98"/>
+
+            <!-- 마지막 온도 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="토"
+                android:layout_weight="26"/>
+
+            <!-- 마지막 온도 다음 여백 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="167"/>
+
+        </LinearLayout>
+
+        <!-- 요일 들어가는 칸 밑 마지막 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="130"/>
+
+    </LinearLayout>
+
+    <!-- 하단여백 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="82" />
+
+</LinearLayout>
